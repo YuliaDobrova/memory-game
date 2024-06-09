@@ -11,9 +11,15 @@ body {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(rgba(31, 29, 88, 0.9), rgba(55, 0, 255, 0.6));
-  background-image: url(./bg-min.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(./images/bg-min.png);
+  background-size: contain;
+  background-repeat: repeat;
+}
+@media (min-width: 700px) {
+  body {
+    background-size: cover;
+    background-repeat: repeat;
+  }
 }
 
 .container {
@@ -22,52 +28,50 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  /* background: #eee; */
+  gap: 20px;
   background: rgba(255, 255, 255, 0.75);
-  border-radius: 10px;
-  padding: 40px 60px;
+  border-radius: 5px;
+  padding: 20px 40px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    gap: 30px;
+    border-radius: 10px;
+    padding: 40px 60px;
+  }
 }
 
 h2 {
   font-size: 3em;
 }
 
-.reset {
-  padding: 15px 20px;
-  color: #267c65;
-  background: #fff;
-  border: none;
-  font-size: 1.5em;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.reset:focus {
-  color: #fff;
-  background: #a2d5ab;
-}
-
 .game {
-  width: 430px;
-  height: 430px;
+  width: 280px;
+  height: 280px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   transform-style: preserve-3d;
   perspective: 500px;
+}
+@media (min-width: 700px) {
+  .game {
+    width: 430px;
+    height: 430px;
+    perspective: 500px;
+    gap: 10px;
+  }
 }
 
 .item {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
-  /* background: #d3d3d3; */
+  font-size: 2.5em;
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 0.75) 0%,
@@ -76,6 +80,14 @@ h2 {
   border-radius: 5px;
   transform: rotateY(180deg);
   transition: 0.25s;
+}
+
+@media (min-width: 700px) {
+  .item {
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+  }
 }
 
 .item.boxOpen {

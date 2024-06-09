@@ -40,6 +40,7 @@ for (let i = 0; i < emojis.length; i++) {
 
           if (document.querySelectorAll(".boxMatch").length == emojis.length) {
             alert("Congratulations! You won! 👏");
+            location.reload();
           }
         } else {
           document.querySelectorAll(".boxOpen")[1].classList.remove("boxOpen");
